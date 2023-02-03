@@ -1,1 +1,20 @@
+n = int(input("Enter the number of students: "))
+students = []
+for i in range(n):
+    roll_no = int(input("Enter roll number of student " + str(i+1) + ": "))
+    name = input("Enter name of student " + str(i+1) + ": ")
+    percentage = int(input("Enter percentage of student " + str(i+1) + ": "))
+    students.append((roll_no, name, percentage))
+
+roll_no = int(input("Enter the roll number: "))
+found = False
+for student in students:
+    if student[0] == roll_no:
+        print("Name:", student[1])
+        print("Percentage:", student[2])
+        found = True
+        break
+
+if not found:
+    print("Roll number not found.")
 
