@@ -1,0 +1,21 @@
+num = int(input("Enter the number to search for: "))
+input_str = input("Enter a list of numbers separated by spaces: ").strip().split()
+nums = []
+for n in input_str:
+    nums.append(int(n))
+index = None
+for i in range(len(nums)):
+    if nums[i] == num:
+        index = i
+        break
+
+if index is not None:
+    print("Number found at index:", index)
+    if index - 10 >= 0:
+        nums[index], nums[index - 10] = nums[index - 10], nums[index]
+        print("Numbers swapped.")
+        print("New list:", nums)
+    else:
+        print("Index is less than 10, unable to swap.")
+else:
+    print("Number not found in the list.")
