@@ -1,0 +1,9 @@
+sentence = input("Enter a sentence: ")
+new_sentence = " ".join([word.capitalize() for word in sentence.split()])
+result = ""
+for i in range(len(new_sentence)):
+    if i >= len(sentence):
+        break
+    if new_sentence[i].isupper() and new_sentence[i] != sentence[i]:
+        result += new_sentence[i]
+print(result)
