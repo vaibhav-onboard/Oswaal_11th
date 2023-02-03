@@ -1,0 +1,16 @@
+marksobt = {}
+n = int(input("Enter the number of students: "))
+
+for i in range(n):
+    name = input("Enter the name of student: ")
+    marks = int(input("Enter marks obtained by the student: "))
+    marksobt[name] = marks
+
+max_marks = max(marksobt.values())
+min_marks = min(marksobt.values())
+
+max_name = [name for name, marks in marksobt.items() if marks == max_marks]
+min_name = [name for name, marks in marksobt.items() if marks == min_marks]
+
+print(f"Student(s) with maximum marks: {max_name} ({max_marks})")
+print(f"Student(s) with minimum marks: {min_name} ({min_marks})")
