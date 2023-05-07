@@ -1,0 +1,90 @@
+def countrec():
+    count = 0
+    with open('STUDENT.DAT', 'rb') as file:
+        while True:
+            try:
+                record = pickle.load(file)
+                if record[2] > 75:
+                    print(record)
+                    count += 1
+            except EOFError:
+                break
+    print("Number of students scoring above 75%:",count)
+countrec()
+
+
+
+
+def DISPLAYWORDS():
+    with open('STORY.TXT', 'r') as file:
+        for line in file:
+            words = line.split()
+            for word in words:
+                if len(word) < 4:
+                    print(word)
+DISPLAYWORDS()
+
+
+
+def FindAverage():
+    total_price = 0
+    count = 0
+    with open('ITEMS.DAT', 'rb') as file:
+        while True:
+            try:
+                item = pickle.load(file)
+                total_price += item['Price']
+                count += 1
+            except EOFError:
+                break
+    if count > 0:
+        average_price = total_price / count
+        print('Average price of items:',average_price)
+    else:
+        print('No items found in the file.')
+FindAverage()
+
+
+
+
+def RevText():
+    with open('Input.txt', 'r') as file:
+        for line in file:
+            words = line.split()
+            for word in words:
+                if word[0] == 'I':
+                    print(word[::-1], end=' ')
+RevText()
+
+
+
+
+
+
+def COUNTLOWER():
+    count = 0
+    with open('BOOK.txt', 'r') as file:
+        for line in file:
+            for char in line:
+                if char.islower():
+                    count += 1
+    print('Number of lowercase alphabets in the file:',count)
+COUNTLOWER()
+
+
+
+
+def show_words():
+    with open('NOTES.TXT', 'r') as file:
+        content = file.read()
+        content = content.upper()
+        print(content)
+show_words()
+
+
+
+
+
+
+
+
