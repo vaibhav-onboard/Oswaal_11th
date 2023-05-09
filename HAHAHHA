@@ -1,0 +1,100 @@
+def count_uppercase_lines(filename):
+    count = 0
+    with open(filename, 'r') as f:
+        for line in f:
+            if line[0].isupper():
+                count += 1
+    return count
+count_uppercase_lines()
+
+def count_corona(filename):
+
+    count = 0
+
+    with open(filename, 'r') as f:
+
+        for line in f:
+
+            count += line.count('Corona')
+
+    return count
+	
+	
+	
+	
+	
+	
+	def display_two_char_words(filename):
+    with open(filename, 'r') as f:
+        for line in f:
+            words = line.split()
+            for word in words:
+                if len(word) == 2:
+                    print(word, end=' ')
+    print()
+		
+		
+		def dispS(filename):
+    with open(filename, 'r') as f:
+        for line in f:
+            if len(line) > 0 and line[0] == 'S':
+                print(line, end='')
+								
+								
+								
+								
+								
+								
+								
+
+	
+
+	
+
+	
+
+	
+
+	def COUNTSIZE(filename):
+    size = 0
+    with open(filename, 'r') as f:
+        for line in f:
+            size += len(line)
+    print("Size of file is", size)
+		
+		
+
+	
+
+	
+
+	
+
+	
+	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+		
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
